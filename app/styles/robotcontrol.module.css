@@ -141,3 +141,12 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.detailstext {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+
+  color: #000000;
+}
