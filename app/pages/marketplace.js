@@ -13,7 +13,6 @@ import sunflowerseed from '../Assets/sunflowerseed.png'
 import appleseed from '../Assets/appleseed.png'
 import tomatoseed from '../Assets/tomatoseed.png'
 import corianderseed from '../Assets/corianderseed.png'
-
 import styles from '../styles/marketplace.module.css';
 
 function marketplace() {
@@ -118,7 +117,7 @@ function marketplace() {
                     <div className={styles.carsConatiner}>
                         <div
                             className={styles.card}
-                            onClick={() => router.push('/capsicumindustries')}
+                            onClick={() => router.push('/caps')}
                         >
                             <Image
                                 src={capsicum}
@@ -157,7 +156,7 @@ function marketplace() {
                     <div className={styles.carsConatiner}>
                         <div
                             className={styles.card}
-                            onClick={() => router.push('/tomatoindustries')}
+                            onClick={() => router.push('/tomatoindustires')}
                         >
                             <Image
                                 src={tomato}
