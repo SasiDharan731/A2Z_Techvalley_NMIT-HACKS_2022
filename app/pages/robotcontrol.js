@@ -6,8 +6,9 @@ import location from '../Assets/location.png'
 import planting from '../Assets/planting.png'
 import harvesting from '../Assets/harvesting.png'
 import maintenance from '../Assets/maintenance.png'
-
+import axios from 'axios';
 function robotcontrol() {
+    const 
   return (
     <div>
 
