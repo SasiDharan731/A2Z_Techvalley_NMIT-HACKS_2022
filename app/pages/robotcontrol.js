@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from '../styles/robotcontrol.module.css';
 import Image from 'next/image';
 import battery from '../Assets/battery.png'
@@ -7,8 +7,27 @@ import planting from '../Assets/planting.png'
 import harvesting from '../Assets/harvesting.png'
 import maintenance from '../Assets/maintenance.png'
 import axios from 'axios';
+import { useRouter } from 'next/router';
+
 function robotcontrol() {
-    const 
+    const router = useRouter()
+    const [stat, setStat] = useState(false)
+    const sendCmd = () => {
+       
+axios.get("http://172.20.10.2:5000/run").then(() => {
+            setStat(true)
+        }).catch(() => {
+            setStat(false)
+        })
+        
+    }
+    const sendCmdstp = () => {
+        axios.get("http://172.20.10.2:5000/stop").then(() => {
+            setStat(true)
+        }).catch(() => {
+            setStat(false)
+        })
+    }
   return (
     <div>
 
@@ -25,14 +44,17 @@ function robotcontrol() {
 
         <div className={styles.controls}>
             <div className={styles.camerafeed}>
-
+            <img
+                        className={styles.camFeed}
+                        src="http://172.20.10.2:8080/?action=stream"
+                    />
             </div>
 
-            <div className={styles.seedsbutton}>
+            <div className={styles.seedsbutton} onClick={sendCmd}>
                 Plant Seeds 
             </div>
 
-            <div className={styles.seedsbutton}>
+            <div className={styles.seedsbutton} onClick={sendCmdstp}>
                 Stop
             </div>
         </div>
