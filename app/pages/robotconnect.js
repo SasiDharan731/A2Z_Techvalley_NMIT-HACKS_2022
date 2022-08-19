@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/robotconnect.module.css';
-import Image from 'next/image'; 
+import Link from 'next/link';
 
 function robotconnect() {
   return (
@@ -21,10 +21,10 @@ function robotconnect() {
             <input className={styles.inputbox} type="text" />
 
 
-            <div className={styles.seedsbutton}>
+            <Link href="robotHealth"><div className={styles.seedsbutton}>
                 Connect 
-            </div>
-        </div>w
+            </div></Link>
+        </div>
 
     </div>
   )

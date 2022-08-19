@@ -68,7 +68,7 @@ function Dashboard() {
                             alt="Picture of the author"
                             width={20}
                             height={20}
-                            onClick={() => router.push('/roversearch')}
+                            onClick={() => router.push('/robotconnect')}
                         />
                     </div>
                     <div className={styles.robotSelect}>
